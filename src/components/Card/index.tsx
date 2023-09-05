@@ -1,6 +1,6 @@
 import { forwardRef, useMemo, useState } from "react";
 import { formatDate } from "../../utils/formatDate";
-import { Container, DateContainer, Description, DescriptionContainer, Tag, Tags, Title, Date, CheckBox } from "./styled"
+import { Container, DateContainer, Description, DescriptionContainer, Tag, Tags, Title, Date, CheckBox, Footer, Photo } from "./styled"
 import { faker } from '@faker-js/faker';
 
 export const Card = forwardRef<HTMLDivElement, {checked?: boolean | undefined; title?: string}>((props, ref) => {
@@ -20,14 +20,17 @@ export const Card = forwardRef<HTMLDivElement, {checked?: boolean | undefined; t
                 </DateContainer>                
                 <Description>{description}</Description>
             </DescriptionContainer>
-            <Tags>
-                <Tag variant='color'>
-                    Entity title
-                </Tag>
-                <Tag variant='base'>
-                    Front-end
-                </Tag>
-            </Tags>
+            <Footer>
+                <Tags>
+                    <Tag variant='color'>
+                        Entity title
+                    </Tag>
+                    <Tag variant='base'>
+                        Front-end
+                    </Tag>
+                </Tags>
+                <Photo src="/Img.png" alt='photoUser' />
+            </Footer>
         </Container>
     )
 })

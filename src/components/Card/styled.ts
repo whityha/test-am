@@ -106,3 +106,17 @@ export const CheckBox = styled.input.attrs({type: "checkbox"})`
     margin: 0;
     margin-right: 5px;
 `
+
+export const Footer = styled.footer`
+    display: flex;
+    & > :nth-child(2) {
+        margin-left: auto;
+    }
+`
+
+export const Photo = styled.img`
+    width: 24px;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+`
